@@ -1,0 +1,13 @@
+// SASS Variables
+$logo-font: 'Parisienne', 'Sans-serif';
+$main-color: rgb(46, 133, 92);
+// Font-Families
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+// Global settings
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
