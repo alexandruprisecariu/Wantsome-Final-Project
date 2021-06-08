@@ -10,12 +10,10 @@
 * {
   box-sizing: border-box;
   font-family: 'Poppins', 'Sans-serif';
-  
 }
 
 html {
   font-size: 16px;
-  
 }
 
 body {
@@ -29,7 +27,6 @@ body {
   a {
     text-decoration: none;
   }
-  
 }
 
 header {
@@ -56,23 +53,18 @@ header {
     display: flex;
     position: absolute;
     right: $padding-header;
-     }
+  }
 
-
- 
   .top-nav li:nth-child(2),
   li:nth-child(4) {
     margin-right: 40px;
   }
-  
 
   li:last-child {
     display: none;
   }
 
-  
-
-  li:(last-child):hover {
+  li :hover {
     color: $logo-color;
   }
 
@@ -83,7 +75,7 @@ header {
 
 //categories section
 
-.categories{
+.categories {
   height: 4rem;
   text-transform: uppercase;
   background-color: $logo-color;
@@ -92,31 +84,28 @@ header {
   flex-flow: column wrap;
   justify-content: center;
 
-  h2{
+  h2 {
     margin: auto;
-    display:none;
+    display: none;
     color: white;
   }
   h2:hover {
     color: $dark-color;
     cursor: pointer;
   }
-  
-  a{
+
+  a {
     color: $dark-color;
   }
-  
-  ul{
+
+  ul {
     padding: 0;
-    display:flex;
+    display: flex;
     justify-content: space-around;
-    
-}
-  a:hover{
+  }
+  a:hover {
     color: $dark-color-lighten;
   }
-
-  
 }
 //media query for mobile
 @media screen and(max-width:768px) {
@@ -129,16 +118,13 @@ header {
     li:last-child {
       display: block;
     }
-    li:(last-child):hover {
-      
-    }
   }
 
   .categories {
     ul {
       display: none;
     }
-    h2{
+    h2 {
       display: block;
     }
   }

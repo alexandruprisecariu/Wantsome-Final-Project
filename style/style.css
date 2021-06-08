@@ -41,7 +41,6 @@ header {
   color: #40af40;
   font-size: 1.4rem;
   padding-left: 2rem;
-  li: last-child;
 }
 
 header #logo-tree {
@@ -70,7 +69,7 @@ header li:last-child {
   display: none;
 }
 
-header :hover {
+header li :hover {
   color: #40af40;
 }
 
@@ -124,9 +123,6 @@ header a {
 }
 
 @media screen and (max-width: 768px) {
-  header {
-    li: last-child;
-  }
   header li:not(:last-child) {
     display: none;
   }
