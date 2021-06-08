@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', 'Sans-serif';
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body ul {
+  list-style: none;
+}
+
+body a {
+  text-decoration: none;
+}
+
+header {
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background-color: #f2f2f2;
+  color: #40af40;
+  font-size: 1.4rem;
+  padding-left: 2rem;
+  li: last-child;
+}
+
+header #logo-tree {
+  font-size: 2.8rem;
+}
+
+header h2 {
+  font-family: 'Parisienne', 'Poppins', 'Sans-serif';
+  font-weight: bolder;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 2rem;
+}
+
+header .top-nav li:nth-child(2),
+header li:nth-child(4) {
+  margin-right: 40px;
+}
+
+header li:last-child {
+  display: none;
+}
+
+header :hover {
+  color: #40af40;
+}
+
+header a {
+  color: #141414;
+}
+
+.categories {
+  height: 4rem;
+  text-transform: uppercase;
+  background-color: #40af40;
+  color: #141414;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.categories h2 {
+  margin: auto;
+  display: none;
+  color: white;
+}
+
+.categories h2:hover {
+  color: #141414;
+  cursor: pointer;
+}
+
+.categories a {
+  color: #141414;
+}
+
+.categories ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.categories a:hover {
+  color: #f2f2f2;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    li: last-child;
+  }
+  header li:not(:last-child) {
+    display: none;
+  }
+  header li:last-child {
+    display: block;
+  }
+  .categories ul {
+    display: none;
+  }
+  .categories h2 {
+    display: block;
+  }
+}
+/*# sourceMappingURL=style.css.map */

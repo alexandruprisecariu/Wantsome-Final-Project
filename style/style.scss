@@ -1,0 +1,145 @@
+// Font-Families import
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+//Import presets
+@import 'colors';
+@import 'margins';
+@import 'fonts&typography';
+//clear defaults
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Sans-serif';
+  
+}
+
+html {
+  font-size: 16px;
+  
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+}
+
+header {
+  height: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  background-color: $dark-color-lighten;
+  color: $logo-color;
+  font-size: 1.4rem;
+  padding-left: $padding-header;
+
+  #logo-tree {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-family: 'Parisienne', 'Poppins', 'Sans-serif';
+    font-weight: bolder;
+  }
+
+  ul {
+    display: flex;
+    position: absolute;
+    right: $padding-header;
+     }
+
+
+ 
+  .top-nav li:nth-child(2),
+  li:nth-child(4) {
+    margin-right: 40px;
+  }
+  
+
+  li:last-child {
+    display: none;
+  }
+
+  
+
+  li:(last-child):hover {
+    color: $logo-color;
+  }
+
+  a {
+    color: $dark-color;
+  }
+}
+
+//categories section
+
+.categories{
+  height: 4rem;
+  text-transform: uppercase;
+  background-color: $logo-color;
+  color: $dark-color;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+
+  h2{
+    margin: auto;
+    display:none;
+    color: white;
+  }
+  h2:hover {
+    color: $dark-color;
+    cursor: pointer;
+  }
+  
+  a{
+    color: $dark-color;
+  }
+  
+  ul{
+    padding: 0;
+    display:flex;
+    justify-content: space-around;
+    
+}
+  a:hover{
+    color: $dark-color-lighten;
+  }
+
+  
+}
+//media query for mobile
+@media screen and(max-width:768px) {
+  header {
+    // padding-left: 20%;
+
+    li:not(:last-child) {
+      display: none;
+    }
+    li:last-child {
+      display: block;
+    }
+    li:(last-child):hover {
+      
+    }
+  }
+
+  .categories {
+    ul {
+      display: none;
+    }
+    h2{
+      display: block;
+    }
+  }
+}
