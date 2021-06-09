@@ -10,6 +10,8 @@
 * {
   box-sizing: border-box;
   font-family: 'Poppins', 'Sans-serif';
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -19,8 +21,8 @@ html {
 body {
   width: 100%;
   min-height: 100vh;
-  margin: 0;
-  padding: 0;
+  scroll-behavior: smooth;
+
   ul {
     list-style: none;
   }
@@ -30,15 +32,20 @@ body {
 }
 
 header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.header-menu {
   height: 3rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  position: relative;
   background-color: $dark-color-lighten;
   color: $logo-color;
   font-size: 1.4rem;
-  padding-left: $padding-header;
+  padding: $padding-header;
 
   #logo-tree {
     font-size: 2.8rem;
@@ -51,7 +58,7 @@ header {
 
   ul {
     display: flex;
-    position: absolute;
+    margin-left: 45%;
     right: $padding-header;
   }
 
@@ -73,6 +80,36 @@ header {
   }
 }
 
+//footer section
+.footer {
+  color: $dark-color-lighten;
+  background-color: $logo-color;
+  font-size: $small-font-size;
+  width: 100%;
+  height: 3rem;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  padding: 0 40px;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    display: flex;
+
+    a {
+      font-size: $bigger-font-size;
+      color: $dark-color-lighten;
+    }
+
+    a:hover {
+      color: $dark-color;
+    }
+    li:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
 //categories section
 
 .categories {
@@ -87,7 +124,7 @@ header {
   h2 {
     margin: auto;
     display: none;
-    color: white;
+    color: $dark-color-lighten;
   }
   h2:hover {
     color: $dark-color;
@@ -101,31 +138,95 @@ header {
   ul {
     padding: 0;
     display: flex;
+
     justify-content: space-around;
+    li {
+      display: inline-block;
+    }
   }
   a:hover {
     color: $dark-color-lighten;
   }
 }
+
+//hero section
+
+.hero {
+  height: 300px;
+  position: relative;
+  top: 8rem;
+  margin-bottom: 8rem;
+  background: linear-gradient(0deg rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('/Wantsome-Final-Project/assets/hero-image.jpg') no-repeat;
+  background-size: cover;
+  background-position: 0% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .hero-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $dark-color-lighten;
+    height: 50%;
+    width: 50%;
+    border: 2px solid $dark-color-lighten;
+    border-radius: 15px;
+  }
+}
+
+//featured products section
+.featured-products {
+  margin: 40px 0;
+}
+.grid-featured {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+  background-color: $dark-color-lighten;
+}
+
+.item {
+  height: 300px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: $dark-color-lighten;
+}
+
 //media query for mobile
 @media screen and(max-width:768px) {
+  //header on mq
   header {
-    // padding-left: 20%;
-
     li:not(:last-child) {
       display: none;
     }
-    li:last-child {
+    .header-menu li:last-child {
       display: block;
+      position: absolute;
+      right: 20px;
+      top: 1rem;
     }
   }
 
+  //categories on mq
   .categories {
     ul {
       display: none;
     }
     h2 {
       display: block;
+    }
+  }
+
+  //featured-items-grid on mq
+  .grid-featured {
+    display: block;
+    .item {
+      margin-top: 20px;
     }
   }
 }
