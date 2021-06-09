@@ -60,6 +60,7 @@ header {
     display: flex;
     margin-left: 45%;
     right: $padding-header;
+    font-size: $normal-font-size;
   }
 
   .top-nav li:nth-child(2),
@@ -122,6 +123,7 @@ header {
   justify-content: center;
 
   h2 {
+    font-size: $normal-font-size;
     margin: auto;
     display: none;
     color: $dark-color-lighten;
@@ -156,14 +158,19 @@ header {
   position: relative;
   top: 8rem;
   margin-bottom: 8rem;
-  background: linear-gradient(0deg rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('/Wantsome-Final-Project/assets/hero-image.jpg') no-repeat;
+  background: linear-gradient(0deg rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('/Wantsome-Final-Project/assets/featured-bg.jpg') no-repeat;
   background-size: cover;
-  background-position: 0% 100%;
+  background-position: 40% 30%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  h1 {
+    font-family: $logo-font;
+    font-size: 3rem;
+  }
 
   .hero-text {
     display: flex;
@@ -187,6 +194,9 @@ header {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 20px;
+  background: linear-gradient(0deg rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url('/Wantsome-Final-Project/assets/featured-bg.jpg') center no-repeat;
+  background-size: cover;
   background-color: $dark-color-lighten;
 }
 
