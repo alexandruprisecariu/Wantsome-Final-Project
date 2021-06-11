@@ -35,49 +35,74 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1;
-}
-
-.header-menu {
-  height: 3rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
   background-color: $dark-color-lighten;
-  color: $logo-color;
-  font-size: 1.4rem;
-  padding: $padding-header;
+  height: 3rem;
 
   #logo-tree {
-    font-size: 2.8rem;
-  }
-
-  h2 {
-    font-family: 'Parisienne', 'Poppins', 'Sans-serif';
-    font-weight: bolder;
-  }
-
-  ul {
-    display: flex;
-    margin-left: 45%;
-    right: $padding-header;
-    font-size: $normal-font-size;
-  }
-
-  .top-nav li:nth-child(2),
-  li:nth-child(4) {
-    margin-right: 40px;
-  }
-
-  li:last-child {
-    display: none;
-  }
-
-  li :hover {
+    font-size: $biggest-font-size;
     color: $logo-color;
+  }
+  h2 {
+    font-family: $logo-font;
+    font-size: $biggest-font-size;
+    color: $dark-color;
   }
 
   a {
     color: $dark-color;
+    &:hover {
+      color: $logo-color;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .text:not(:nth-child(3)) {
+    margin-right: 20px;
+  }
+
+  .right li:last-child {
+    display: none;
+    font-size: $biggest-font-size;
+  }
+}
+//categories section
+nav.categories {
+  background-color: $logo-color;
+  display: flex;
+  position: fixed;
+  top: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+
+  a {
+    color: $dark-color-lighten;
+    &:hover {
+      color: $dark-color;
+    }
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h2 {
+    display: none;
   }
 }
 
@@ -111,53 +136,12 @@ header {
     }
   }
 }
-//categories section
-
-.categories {
-  height: 4rem;
-  text-transform: uppercase;
-  background-color: $logo-color;
-  color: $dark-color;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-
-  h2 {
-    font-size: $normal-font-size;
-    margin: auto;
-    display: none;
-    color: $dark-color-lighten;
-  }
-  h2:hover {
-    color: $dark-color;
-    cursor: pointer;
-  }
-
-  a {
-    color: $dark-color;
-  }
-
-  ul {
-    padding: 0;
-    display: flex;
-
-    justify-content: space-around;
-    li {
-      display: inline-block;
-    }
-  }
-  a:hover {
-    color: $dark-color-lighten;
-  }
-}
-
-//hero section
 
 .hero {
   height: 300px;
   position: relative;
-  top: 8rem;
-  margin-bottom: 8rem;
+  top: 6rem;
+  margin-bottom: 6rem;
   background: linear-gradient(0deg rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url('/Wantsome-Final-Project/assets/smaller-featured-bg.jpg') no-repeat;
   background-size: cover;
@@ -212,19 +196,16 @@ header {
 @media screen and(max-width:768px) {
   //header on mq
   header {
-    li:not(:last-child) {
+    .right li {
       display: none;
     }
-    .header-menu li:last-child {
+
+    .right li:last-child {
       display: block;
-      position: absolute;
-      right: 20px;
-      top: 1rem;
     }
   }
-
   //categories on mq
-  .categories {
+  nav.categories {
     ul {
       display: none;
     }

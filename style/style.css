@@ -30,58 +30,103 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1;
-}
-
-.header-menu {
-  height: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 20px;
   background-color: #f2f2f2;
+  height: 3rem;
+}
+
+header #logo-tree {
+  font-size: 2rem;
   color: #5a7541;
-  font-size: 1.4rem;
-  padding: 2rem;
 }
 
-.header-menu #logo-tree {
-  font-size: 2.8rem;
+header h2 {
+  font-family: "Parisienne", "Sans-serif";
+  font-size: 2rem;
+  color: #08051d;
 }
 
-.header-menu h2 {
-  font-family: 'Parisienne', 'Poppins', 'Sans-serif';
-  font-weight: bolder;
+header a {
+  color: #08051d;
 }
 
-.header-menu ul {
+header a:hover {
+  color: #5a7541;
+}
+
+header ul {
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 45%;
-  right: 2rem;
-  font-size: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.header-menu .top-nav li:nth-child(2),
-.header-menu li:nth-child(4) {
-  margin-right: 40px;
+header .text:not(:nth-child(3)) {
+  margin-right: 20px;
 }
 
-.header-menu li:last-child {
+header .right li:last-child {
   display: none;
+  font-size: 2rem;
 }
 
-.header-menu li :hover {
-  color: #5a7541;
+nav.categories {
+  background-color: #5a7541;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 3rem;
+  height: 3rem;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 0 20px;
 }
 
-.header-menu a {
+nav.categories a {
+  color: #f2f2f2;
+}
+
+nav.categories a:hover {
   color: #08051d;
+}
+
+nav.categories ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav.categories h2 {
+  display: none;
 }
 
 .footer {
@@ -123,61 +168,11 @@ header {
   margin-right: 50px;
 }
 
-.categories {
-  height: 4rem;
-  text-transform: uppercase;
-  background-color: #5a7541;
-  color: #08051d;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.categories h2 {
-  font-size: 1rem;
-  margin: auto;
-  display: none;
-  color: #f2f2f2;
-}
-
-.categories h2:hover {
-  color: #08051d;
-  cursor: pointer;
-}
-
-.categories a {
-  color: #08051d;
-}
-
-.categories ul {
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.categories ul li {
-  display: inline-block;
-}
-
-.categories a:hover {
-  color: #f2f2f2;
-}
-
 .hero {
   height: 300px;
   position: relative;
-  top: 8rem;
-  margin-bottom: 8rem;
+  top: 6rem;
+  margin-bottom: 6rem;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8))), url("/Wantsome-Final-Project/assets/smaller-featured-bg.jpg") no-repeat;
   background: linear-gradient(0deg rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/Wantsome-Final-Project/assets/smaller-featured-bg.jpg") no-repeat;
   background-size: cover;
@@ -242,19 +237,16 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-  header li:not(:last-child) {
+  header .right li {
     display: none;
   }
-  header .header-menu li:last-child {
+  header .right li:last-child {
     display: block;
-    position: absolute;
-    right: 20px;
-    top: 1rem;
   }
-  .categories ul {
+  nav.categories ul {
     display: none;
   }
-  .categories h2 {
+  nav.categories h2 {
     display: block;
   }
   .grid-featured {
